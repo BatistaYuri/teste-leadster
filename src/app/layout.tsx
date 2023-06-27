@@ -11,6 +11,14 @@ const sans = localFont({
       weight: "400",
     },
     {
+      path: "../../public/fonts/PlusJakartaSans-Medium.ttf",
+      weight: "500",
+    },
+    {
+      path: "../../public/fonts/PlusJakartaSans-SemiBold.ttf",
+      weight: "600",
+    },
+    {
       path: "../../public/fonts/PlusJakartaSans-Bold.ttf",
       weight: "700",
     },
