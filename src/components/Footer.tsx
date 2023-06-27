@@ -37,7 +37,7 @@ const materials: AboutList = {
 export function Footer() {
   return (
     <footer>
-      <div className="container flex flex-col items-center">
+      <div className="container flex flex-col items-center py-8">
         <div className="flex flex-col items-center mb-10">
           <Image
             src="/images/logo-animated.gif"
@@ -49,7 +49,7 @@ export function Footer() {
             Transformando visitantes em clientes.
           </p>
         </div>
-        <div className="about grid lg:grid-cols-4 md:grid-cols-2 w-full">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 w-full">
           <About list={mainLinks} />
           <About list={cases} />
           <About list={materials} />
@@ -72,6 +72,22 @@ export function Footer() {
                 (42) 98828-9851
               </span>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="border-t">
+        <div className="container grid grid-cols-2 w-full py-8">
+          <div className="flex-1 px-3">
+            <p className="font-semibold" style={{ color: "#677294" }}>
+              Copyright © 2015 - 2022 Todos os direitos reservados |{" "}
+              <span className="text-blue cursor-pointer">Leadster</span>
+            </p>
+          </div>
+          <div className="flex-1 px-3">
+            <p style={{ color: "#677294" }}>
+              Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 |
+              Termos de uso
+            </p>
           </div>
         </div>
       </div>
