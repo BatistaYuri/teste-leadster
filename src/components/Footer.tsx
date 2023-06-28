@@ -44,6 +44,7 @@ export function Footer() {
             width={270}
             height={62}
             alt="Logo Leadster"
+            loading="lazy"
           />
           <p className="text-sm" style={{ color: "#677294", fontSize: "15px" }}>
             Transformando visitantes em clientes.
@@ -53,7 +54,7 @@ export function Footer() {
           <About list={mainLinks} />
           <About list={cases} />
           <About list={materials} />
-          <div className="lg:flex-1 md:flex-6 px-3">
+          <div className="px-3">
             <p className="text-lg font-semibold mb-5">Siga a Leadster</p>
             <div className="icon-social mb-2">
               <Icon svg={faLinkedinIn} href="" />
@@ -77,13 +78,13 @@ export function Footer() {
       </div>
       <div className="border-t">
         <div className="container grid grid-cols-2 w-full py-8">
-          <div className="flex-1 px-3">
+          <div className="px-3">
             <p className="font-semibold" style={{ color: "#677294" }}>
               Copyright © 2015 - 2022 Todos os direitos reservados |{" "}
               <span className="text-blue cursor-pointer">Leadster</span>
             </p>
           </div>
-          <div className="flex-1 px-3">
+          <div className="px-3">
             <p style={{ color: "#677294" }}>
               Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 |
               Termos de uso
