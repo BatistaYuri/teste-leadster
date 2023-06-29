@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-import { Button } from "@/components";
+import { Button, List } from "@/components";
 import { ButtonType } from "@/components/Button";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
           <h2 className="text-[2.4em] font-medium text-center">
             Menos Conversinha,
           </h2>
-          <div className="flex flex-wrap justify-center px-5 pb-3 mb-2 border-b">
+          <div className="flex flex-wrap justify-center px-5 pb-3 mb-2 border-b-2">
             <h1 className="text-7xl font-bold text-blue text-center mr-3">
               Mais
             </h1>
@@ -41,7 +41,13 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="py-12"></div>
+
+      <div className="py-12">
+        <div className="container flex justify-center">
+          <List />
+        </div>
+      </div>
+
       <div className="py-12 bg-light relative overflow-hidden">
         <div className="bg-wave"></div>
         <div className="container">

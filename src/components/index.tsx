@@ -3,3 +3,7 @@ export { Footer } from "./Footer";
 export { About } from "./About";
 export { Icon } from "./Icon";
 export { Button } from "./Button";
+export { List } from "./List";
+export { Tooltip } from "./Tooltip";
+export { CardVideo } from "./CardVideo";
+export { OrderBy } from "./OrderBy";
