@@ -7,7 +7,8 @@ h1,
 h2,
 h3,
 h4,
-span {
+span,
+label {
   font-family: Plus Jakarta Sans, sans-serif !important;
   color: #2c3e50;
   line-height: 1.2;
@@ -49,7 +50,8 @@ span {
   background-color: #f0f8ff;
 }
 
-.text-blue {
+.text-blue,
+.card-video:hover p {
   color: #007dff !important;
 }
 
@@ -63,16 +65,16 @@ span {
 
 .bg-wave {
   position: absolute;
-  background-color: #e6f3ff !important ;
+  background-color: #e6f3ff;
   height: 1022px;
   display: block;
   right: -100px;
-  left: 150px !important;
-  transform: rotate(-43deg) !important;
-  top: 200px !important;
-  width: 870px !important;
-  border-radius: 80px !important;
-  z-index: 2 !important;
+  left: 150px;
+  transform: rotate(-43deg);
+  top: 200px;
+  width: 870px;
+  border-radius: 80px;
+  z-index: 2;
 }
 
 .button-blue {
@@ -85,4 +87,51 @@ span {
   border: 1px solid #007dff;
   transition: all 0.3s linear;
   font-weight: 600;
+}
+
+.card-video {
+  box-shadow: 0 0 30px 5px rgba(28, 43, 76, 0.1);
+  border-radius: 15px;
+  width: 300px;
+  max-height: 250px;
+}
+
+.card-video-player {
+  display: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 300px;
+  height: 169px;
+}
+
+.card-video:hover .card-video-player {
+  display: flex;
+  background-color: rgba(0, 125, 255, 0.3);
+}
+
+.tooltip {
+  border: solid 1px #2c3e50;
+  border-radius: 30px;
+}
+
+.tooltip:hover {
+  border-color: #007dff;
+}
+
+.tooltip:hover p {
+  color: #007dff !important;
+}
+
+.tooltip.selected {
+  border-color: #007dff !important;
+  background-color: #007dff !important;
+}
+
+.tooltip.selected p {
+  color: #fff !important;
+}
+
+.combo-box {
+  border: solid 1px #2c3e50;
+  border-radius: 10px;
 }
