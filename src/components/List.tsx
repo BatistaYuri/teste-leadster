@@ -1,5 +1,7 @@
+"use client";
 import { CardVideo } from "./CardVideo";
 import { OrderBy } from "./OrderBy";
+import { Paginator } from "./Paginator";
 import { Tooltip } from "./Tooltip";
 
 const videos: any[] = [
@@ -50,16 +52,27 @@ const videos: any[] = [
   },
 ];
 
+const filters: any[] = [
+  { id: 0, name: "Agência", selected: false },
+  { id: 1, name: "Chatbot", selected: false },
+  { id: 2, name: "Marketing Digital", selected: false },
+  { id: 3, name: "Geração de Leads", selected: true },
+  { id: 4, name: "Mídia paga", selected: false },
+];
+
+function onChangeFilter() {}
+function onChangeOrder() {}
+function onClickVideo() {}
+function onChangePage(index: number) {}
+
 export function List() {
   return (
     <div>
       <div className="flex mb-4 justify-between">
         <div className="flex justify-center">
-          <Tooltip name="Agência" selected={false}></Tooltip>
-          <Tooltip name="Chatbot" selected={false}></Tooltip>
-          <Tooltip name="Marketing Digital" selected={false}></Tooltip>
-          <Tooltip name="Geração de Leads" selected={true}></Tooltip>
-          <Tooltip name="Mídia paga" selected={false}></Tooltip>
+          {filters.map(({ id, name, selected }) => (
+            <Tooltip key={id} name={name} selected={selected}></Tooltip>
+          ))}
         </div>
         <div className="flex justify-center">
           <OrderBy></OrderBy>
@@ -67,15 +80,23 @@ export function List() {
       </div>
       <div className="flex justify-center py-8 border-y-2">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-          {videos.map((video) => (
+          {videos.map(({ id, thumbnailImg, title }) => (
             <CardVideo
-              key={video.id}
-              thumbnailImg={video.thumbnailImg}
-              altImg={`Thumbnail Video ${video.id}`}
-              title={video.title}
+              key={id}
+              thumbnailImg={thumbnailImg}
+              altImg={`Thumbnail Video ${id}`}
+              title={title}
             ></CardVideo>
           ))}
         </div>
+      </div>
+      <div className="flex justify-center mt-8">
+        <Paginator
+          total={30}
+          size={9}
+          index={0}
+          onClick={(index: number) => onChangePage(index)}
+        />
       </div>
     </div>
   );

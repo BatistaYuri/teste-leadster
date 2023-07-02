@@ -7,3 +7,4 @@ export { List } from "./List";
 export { Tooltip } from "./Tooltip";
 export { CardVideo } from "./CardVideo";
 export { OrderBy } from "./OrderBy";
+export { Paginator } from "./Paginator";

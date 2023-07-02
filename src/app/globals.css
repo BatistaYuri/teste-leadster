@@ -135,3 +135,13 @@ label {
   border: solid 1px #2c3e50;
   border-radius: 10px;
 }
+
+.paginator-number-page.selected {
+  border: solid 1px #007dff;
+  border-radius: 5px;
+}
+
+.paginator-number-page:hover p,
+.paginator-number-page.selected p {
+  color: #007dff !important;
+}
