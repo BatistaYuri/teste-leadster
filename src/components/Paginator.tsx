@@ -14,13 +14,11 @@ export function Paginator({
     return <></>;
   }
   const pages: number = Math.ceil(total / size);
-  if (pages > 10) {
-  }
   return (
     <div className="flex items-center">
       <p className="font-semibold mr-2">Página</p>
       <div className="flex">
-        {[...Array(pages).keys()].map((page) => (
+        {Array.from({ length: pages }, (_, i) => i + 1).map((page) => (
           <div
             key={page}
             className={`paginator-number-page cursor-pointer px-2 py-1 ${
@@ -28,7 +26,7 @@ export function Paginator({
             }`}
             onClick={() => onClick(page)}
           >
-            <p className="font-semibold">{page + 1}</p>
+            <p className="font-semibold">{page}</p>
           </div>
         ))}
       </div>
