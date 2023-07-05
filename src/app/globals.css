@@ -50,6 +50,10 @@ label {
   background-color: #f0f8ff;
 }
 
+.bg-blue {
+  background-color: #007dff;
+}
+
 .text-blue,
 .card-video:hover p {
   color: #007dff !important;
@@ -144,4 +148,53 @@ label {
 .paginator-number-page:hover p,
 .paginator-number-page.selected p {
   color: #007dff !important;
+}
+
+.button-download-theme-xls div {
+  background-color: #9fefdf;
+}
+.button-download-theme-xls svg {
+  color: #03b991;
+}
+.button-download-theme-xls p {
+  background-color: #c2f4ea;
+  color: #03b991;
+}
+
+.button-download-theme-doc div {
+  background-color: #a1d9ff;
+}
+.button-download-theme-doc svg {
+  color: #1084ee;
+}
+.button-download-theme-doc p {
+  background-color: #c2e6ff;
+  color: #1084ee;
+}
+
+.button-download-theme-ppt div {
+  background-color: #fff1a0;
+}
+.button-download-theme-ppt svg {
+  color: #c3ad46;
+}
+.button-download-theme-ppt p {
+  background-color: #fff8d0;
+  color: #c3ad46;
+}
+
+.button-download-theme-zip div {
+  background-color: #d0dee7;
+}
+.button-download-theme-zip svg {
+  color: #86939c;
+}
+.button-download-theme-zip p {
+  background-color: #e8eef3;
+  color: #86939c;
+}
+
+.react-player div {
+  width: auto !important;
+  max-width: 576px !important;
 }

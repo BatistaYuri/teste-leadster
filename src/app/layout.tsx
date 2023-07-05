@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import localFont from "@next/font/local";
-import { Header, Footer } from "@/components";
+import { Header, Footer, Modal } from "@/components";
 import Head from "next/head";
 
 const sans = localFont({
@@ -41,10 +41,12 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
       </Head>
-      <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+      <body className={`${inter.className}`}>
+        <main>
+          <Header />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

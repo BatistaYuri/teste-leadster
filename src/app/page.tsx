@@ -1,12 +1,25 @@
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-import { Button, List } from "@/components";
+import { Button, List, Modal } from "@/components";
 import { ButtonType } from "@/components/Button";
+import { useEffect, useState } from "react";
+import { Video } from "@/models/videos";
 
 export default function Home() {
+  const [video, setVideo] = useState<Video | null>(null);
+  useEffect(() => {
+    const hidden = " overflow-y-hidden";
+    if (video) {
+      document.body.className += hidden;
+    } else {
+      document.body.className = document.body.className.replace(hidden, "");
+    }
+  }, [video]);
   return (
-    <main>
+    <>
+      {video && <Modal video={video} onClose={() => setVideo(null)} />}
       <div className="py-24 bg-light">
         <div className="container flex flex-col items-center">
           <div className="blue-box py-1 px-3 font-bold text-xs">
@@ -44,7 +57,7 @@ export default function Home() {
 
       <div className="py-12">
         <div className="container flex justify-center">
-          <List />
+          <List onClickVideo={(video) => setVideo(video)} />
         </div>
       </div>
 
@@ -118,6 +131,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </>
   );
 }

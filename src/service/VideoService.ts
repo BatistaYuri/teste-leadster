@@ -32,6 +32,17 @@ export function getVideos(
     });
 }
 
+export function getVideo(id: number): Promise<Video> {
+  return api
+    .get<{ video: Video }>(`/videos/${id}`)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((e) => {
+      return e;
+    });
+}
+
 export function getAllCategories(): Promise<Category[]> {
   return api
     .get<{ categories: Category[] }>("/categories")

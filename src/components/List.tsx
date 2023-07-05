@@ -1,5 +1,5 @@
 "use client";
-import { getVideos, getAllCategories } from "@/service/VideoService";
+import { getVideos, getAllCategories, getVideo } from "@/service/VideoService";
 import { CardVideo } from "./CardVideo";
 import { OrderBy } from "./OrderBy";
 import { Paginator } from "./Paginator";
@@ -7,9 +7,11 @@ import { Tooltip } from "./Tooltip";
 import { useCallback, useEffect, useState } from "react";
 import { Category, Video } from "@/models/videos";
 
-function onClickVideo(videoId: number) {}
-
-export function List() {
+export function List({
+  onClickVideo,
+}: {
+  onClickVideo: (video: Video) => void;
+}) {
   const [page, setPage] = useState<number>(1);
   const [limit, setLimit] = useState<number>(9);
   const [order, setOrder] = useState<string>("name");
@@ -34,6 +36,12 @@ export function List() {
     }
     setFilters(newFilters);
     setPage(1);
+  };
+
+  const handleVideo = (id: number) => {
+    getVideo(id).then((video) => {
+      onClickVideo(video);
+    });
   };
 
   useEffect(() => {
@@ -78,7 +86,7 @@ export function List() {
               key={id}
               altImg={`Thumbnail Video ${id}`}
               title={title}
-              onClick={() => onClickVideo(id)}
+              onClick={() => handleVideo(id)}
             ></CardVideo>
           ))}
         </div>
