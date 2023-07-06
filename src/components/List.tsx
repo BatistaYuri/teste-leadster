@@ -63,8 +63,8 @@ export function List({
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row mb-4 justify-between flex-wrap gap-2">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:flex justify-center gap-2">
+      <div className="flex flex-col lg:flex-row mb-4 justify-between flex-wrap gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:flex justify-center gap-3">
           {categories?.map(({ id, name }) => (
             <Tooltip
               key={id}

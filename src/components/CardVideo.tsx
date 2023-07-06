@@ -22,8 +22,8 @@ export function CardVideo({
       <div className="">
         <Image
           src={thumbnail}
-          width={300}
-          height={250}
+          width={350}
+          height={300}
           alt={altImg}
           loading="lazy"
         />
@@ -31,8 +31,8 @@ export function CardVideo({
       <div className="card-video-player absolute top-0 justify-center items-center">
         <FontAwesomeIcon
           icon={faPlay}
-          width={56}
-          height={56}
+          width={60}
+          height={60}
           color="white"
           opacity={200}
         />
