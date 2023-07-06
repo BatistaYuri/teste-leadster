@@ -6,6 +6,7 @@ import { Paginator } from "./Paginator";
 import { Tooltip } from "./Tooltip";
 import { useCallback, useEffect, useState } from "react";
 import { Category, Video } from "@/models/videos";
+import { Spinner } from "./Spinner";
 
 export function List({
   onClickVideo,
@@ -15,9 +16,9 @@ export function List({
   const [page, setPage] = useState<number>(1);
   const [limit, setLimit] = useState<number>(9);
   const [order, setOrder] = useState<string>("name");
-  const [videos, setVideos] = useState<Video[]>([]);
+  const [videos, setVideos] = useState<Video[] | null>(null);
   const [totalVideos, setTotalVideos] = useState<number>(0);
-  const [categories, setCategories] = useState<Category[]>([]);
+  const [categories, setCategories] = useState<Category[] | null>(null);
   const [filters, setFilters] = useState<number[]>([]);
 
   const loadVideos = useCallback(() => {
@@ -56,11 +57,15 @@ export function List({
     loadVideos();
   }, [loadVideos, page, order, filters]);
 
+  if (!videos && !categories) {
+    return <Spinner />;
+  }
+
   return (
     <div>
       <div className="flex flex-col lg:flex-row mb-4 justify-between flex-wrap gap-2">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:flex justify-center gap-2">
-          {categories.map(({ id, name }) => (
+          {categories?.map(({ id, name }) => (
             <Tooltip
               key={id}
               name={name}
@@ -81,7 +86,7 @@ export function List({
       </div>
       <div className="flex justify-center py-8 border-y-2">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
-          {videos.map(({ id, title }) => (
+          {videos?.map(({ id, title }) => (
             <CardVideo
               key={id}
               altImg={`Thumbnail Video ${id}`}

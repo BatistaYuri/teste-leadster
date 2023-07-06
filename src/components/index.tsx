@@ -10,3 +10,4 @@ export { OrderBy } from "./OrderBy";
 export { Paginator } from "./Paginator";
 export { Modal } from "./Modal";
 export { ButtonDownload } from "./ButtonDownload";
+export { Spinner } from "./Spinner";
