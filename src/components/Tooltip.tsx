@@ -9,12 +9,12 @@ export function Tooltip({
 }) {
   return (
     <div
-      className={`tooltip px-4 py-2 cursor-pointer text-center ${
+      className={`tooltip px-4 py-2 text-sm cursor-pointer self-center ${
         selected && "selected"
       }`}
       onClick={onClick}
     >
-      <p>{name}</p>
+      <p className="font-medium">{name}</p>
     </div>
   );
 }

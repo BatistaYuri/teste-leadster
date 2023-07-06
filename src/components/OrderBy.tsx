@@ -21,7 +21,7 @@ export function OrderBy({
       onChange={onChange}
       className="flex justify-end items-center gap-2"
     >
-      <label className="font-semibold">Ordenar por</label>
+      <label className="text-sm font-bold">Ordenar por</label>
     </ComboBox>
   );
 }

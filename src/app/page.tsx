@@ -1,6 +1,4 @@
 "use client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { Button, List, Modal } from "@/components";
 import { ButtonType } from "@/components/Button";
@@ -47,9 +45,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <p>
-            Conheça as estratégias que{" "}
-            <span className="font-semibold">mudam o jogo</span> e como
+          <p className="font-medium">
+            Conheça as estratégias que <strong>mudam o jogo</strong> e como
             aplicá-las no seu negócio
           </p>
         </div>
@@ -83,15 +80,7 @@ export default function Home() {
                 Fácil criação e ativação
               </h3>
               <div className="flex justify-start items-center flex-wrap">
-                <Button type={ButtonType.BLUE}>
-                  VER DEMONSTRAÇÃO
-                  <FontAwesomeIcon
-                    className="inline ml-2"
-                    icon={faArrowRight}
-                    width={18}
-                    height={18}
-                  />
-                </Button>
+                <Button type={ButtonType.BLUE}>VER DEMONSTRAÇÃO</Button>
                 <Image
                   src="/images/selo_RD.png"
                   width={150}
