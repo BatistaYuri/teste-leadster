@@ -19,8 +19,9 @@ export function OrderBy({
       options={options}
       valeu={value}
       onChange={onChange}
+      className="flex justify-end items-center gap-2"
     >
-      <label className="font-semibold mr-2">Ordenar por</label>
+      <label className="font-semibold">Ordenar por</label>
     </ComboBox>
   );
 }

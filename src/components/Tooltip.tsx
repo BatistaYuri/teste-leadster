@@ -9,7 +9,7 @@ export function Tooltip({
 }) {
   return (
     <div
-      className={`tooltip px-4 py-2 cursor-pointer ml-4 first:mx-0 ${
+      className={`tooltip px-4 py-2 cursor-pointer text-center ${
         selected && "selected"
       }`}
       onClick={onClick}

@@ -18,7 +18,7 @@ export function CardVideo({
 }) {
   const thumbnail = thumbnailImg ? thumbnailImg : "/images/thumbnail.png";
   return (
-    <div className="card-video m-4 cursor-pointer relative" onClick={onClick}>
+    <div className="card-video cursor-pointer relative" onClick={onClick}>
       <div className="">
         <Image
           src={thumbnail}

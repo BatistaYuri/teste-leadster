@@ -58,8 +58,8 @@ export function List({
 
   return (
     <div>
-      <div className="flex mb-4 justify-between">
-        <div className="flex justify-center">
+      <div className="flex flex-col lg:flex-row mb-4 justify-between flex-wrap gap-2">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:flex justify-center gap-2">
           {categories.map(({ id, name }) => (
             <Tooltip
               key={id}
@@ -69,7 +69,7 @@ export function List({
             ></Tooltip>
           ))}
         </div>
-        <div className="flex justify-center">
+        <div>
           <OrderBy
             value={order}
             onChange={(value) => {
@@ -80,7 +80,7 @@ export function List({
         </div>
       </div>
       <div className="flex justify-center py-8 border-y-2">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
           {videos.map(({ id, title }) => (
             <CardVideo
               key={id}
