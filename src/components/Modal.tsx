@@ -1,10 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import { ButtonDownload, ButtonDownloadTheme } from "./ButtonDownload";
 import { faClose, faCloudDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Video } from "@/models/videos";
+import { Spinner } from "./Spinner";
 export function Modal({
   video,
   onClose,
@@ -12,6 +13,7 @@ export function Modal({
   video: Video | null;
   onClose?: () => void;
 }) {
+  const [loading, setLoading] = useState<boolean>(true);
   return (
     <div className="flex justify-center items-center fixed z-50 p-4 overflow-x-hidden overflow-y-auto inset-0 bg-black bg-opacity-30">
       <div className="relative w-auto mx-auto max-w-xl rounded-2xl overflow-hidden">
@@ -36,9 +38,18 @@ export function Modal({
               </h3>
             </div>
           </div>
-
+          {loading && (
+            <div className="absolute w-full top-[275px]">
+              <Spinner />
+            </div>
+          )}
           <div className="react-player max-w-xl">
-            <ReactPlayer controls={true} url={video?.url} playing={false} />
+            <ReactPlayer
+              controls={true}
+              url={video?.url}
+              playing={false}
+              onReady={() => setLoading(false)}
+            />
           </div>
           <div className="relative p-5">
             <p className="font-bold text-sm border-b pb-2">Descrição</p>
