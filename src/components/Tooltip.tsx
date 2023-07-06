@@ -14,7 +14,7 @@ export function Tooltip({
       }`}
       onClick={onClick}
     >
-      <p className="font-medium">{name}</p>
+      <p className="font-medium text-center">{name}</p>
     </div>
   );
 }
