@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { AboutList } from "./About";
 import { About, Icon } from "@/components";
@@ -6,35 +7,37 @@ import {
   faLinkedinIn,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { useTranslations } from "next-intl";
 const mainLinks: AboutList = {
-  name: "Links Principais",
+  name: "main-links",
   itens: [
-    { id: 0, name: "Home", href: "" },
-    { id: 1, name: "Ferramenta", href: "" },
-    { id: 2, name: "Preços", href: "" },
-    { id: 3, name: "Contato", href: "" },
+    { id: 0, name: "home", href: "" },
+    { id: 1, name: "tool", href: "" },
+    { id: 2, name: "prices", href: "" },
+    { id: 3, name: "contact", href: "" },
   ],
 };
 const cases: AboutList = {
-  name: "Cases",
+  name: "cases",
   itens: [
-    { id: 0, name: "Blog", href: "" },
-    { id: 1, name: "Parceria com Agências", href: "" },
-    { id: 2, name: "Guia Definitivo de Marketing", href: "" },
-    { id: 3, name: "Materiais Gratuitos", href: "" },
+    { id: 0, name: "blog", href: "" },
+    { id: 1, name: "partnership", href: "" },
+    { id: 2, name: "guide", href: "" },
+    { id: 3, name: "free-materials", href: "" },
   ],
 };
 const materials: AboutList = {
-  name: "Materiais",
+  name: "materials",
   itens: [
-    { id: 0, name: "Geração de Leads B2B", href: "" },
-    { id: 1, name: "Geração de Leads em Software", href: "" },
-    { id: 2, name: "Geração de Leads em Imobiliária", href: "" },
-    { id: 3, name: "Cases de Sucesso", href: "" },
+    { id: 0, name: "b2b", href: "" },
+    { id: 1, name: "lead-generation-software", href: "" },
+    { id: 2, name: "lead-generation-real-estate", href: "" },
+    { id: 3, name: "success-stories", href: "" },
   ],
 };
 
 export function Footer() {
+  const translate = useTranslations("common.footer");
   return (
     <footer>
       <div className="container flex flex-col items-center py-8">
@@ -47,28 +50,30 @@ export function Footer() {
             loading="lazy"
           />
           <p className="text-sm" style={{ color: "#677294", fontSize: "15px" }}>
-            Transformando visitantes em clientes.
+            {translate("turning-visitors-customers")}
           </p>
         </div>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 w-full">
-          <About list={mainLinks} />
-          <About list={cases} />
-          <About list={materials} />
+          <About list={mainLinks} translate={translate} />
+          <About list={cases} translate={translate} />
+          <About list={materials} translate={translate} />
           <div className="px-3">
-            <p className="text-lg font-semibold mb-5">Siga a Leadster</p>
+            <p className="text-lg font-semibold mb-5">
+              {translate("follow-leadster")}
+            </p>
             <div className="icon-social mb-2">
               <Icon svg={faLinkedinIn} href="" />
               <Icon svg={faFacebookF} href="" />
               <Icon svg={faInstagram} href="" />
             </div>
             <div className="flex flex-wrap">
-              <p className="font-medium">E-mail:</p>
+              <p className="font-medium">{translate("e-mail")}</p>
               <span style={{ color: "#677294", fontSize: "15px" }}>
                 contato@leadster.com.br
               </span>
             </div>
             <div className="flex flex-wrap">
-              <p className="font-medium">Telefone:</p>
+              <p className="font-medium">{translate("telephone")}</p>
               <span style={{ color: "#677294", fontSize: "15px" }}>
                 (42) 98828-9851
               </span>
@@ -80,14 +85,14 @@ export function Footer() {
         <div className="container grid grid-cols-2 w-full py-8">
           <div className="px-3">
             <p className="font-semibold" style={{ color: "#677294" }}>
-              Copyright © 2015 - 2022 Todos os direitos reservados |{" "}
+              {translate("copyright")} |{" "}
               <span className="text-blue cursor-pointer">Leadster</span>
             </p>
           </div>
           <div className="px-3">
             <p style={{ color: "#677294" }}>
-              Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 |
-              Termos de uso
+              Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 |{" "}
+              {translate("terms-use")}
             </p>
           </div>
         </div>

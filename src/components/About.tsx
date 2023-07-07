@@ -11,16 +11,22 @@ interface AboutItens {
   href: string;
 }
 
-export function About({ list }: { list: AboutList }) {
+export function About({
+  list,
+  translate,
+}: {
+  list: AboutList;
+  translate: any;
+}) {
   const { name, itens } = list;
   return (
     <div className="lg:flex-1 md:flex-6 px-3">
-      <p className="text-lg font-semibold mb-5">{name}</p>
+      <p className="text-lg font-semibold mb-5">{translate(name)}</p>
       <ul>
         {itens.map((item: AboutItens) => (
           <li key={item.id} className="mb-4">
             <Link href={item.href} style={{ color: "#677294" }}>
-              {item.name}
+              {translate(item.name)}
             </Link>
           </li>
         ))}

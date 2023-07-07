@@ -202,10 +202,14 @@
     }
   ],
   "categories": [
-    { "id": 0, "name": "Agência" },
-    { "id": 1, "name": "Chatbot" },
-    { "id": 2, "name": "Marketing Digital" },
-    { "id": 3, "name": "Geração de Leads" },
-    { "id": 4, "name": "Mídia paga" }
+    { "id": 0, "name": "common.home.list.filter.agency" },
+    { "id": 1, "name": "common.home.list.filter.chatbot" },
+    { "id": 2, "name": "common.home.list.filter.digital-marketing" },
+    { "id": 3, "name": "common.home.list.filter.lead-generation" },
+    { "id": 4, "name": "common.home.list.filter.paid-media" }
+  ],
+  "orderOptions": [
+    { "id": "date", "name": "common.home.list.order.publication-date" },
+    { "id": "name", "name": "common.home.list.order.name" }
   ]
 }

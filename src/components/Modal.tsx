@@ -4,8 +4,9 @@ import ReactPlayer from "react-player";
 import { ButtonDownload, ButtonDownloadTheme } from "./ButtonDownload";
 import { faClose, faCloudDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Video } from "@/models/videos";
+import { Video } from "@/models/types";
 import { Spinner } from "./Spinner";
+import { useTranslations } from "next-intl";
 export function Modal({
   video,
   onClose,
@@ -13,6 +14,7 @@ export function Modal({
   video: Video | null;
   onClose?: () => void;
 }) {
+  const translate = useTranslations("common.home.list.modal");
   const [loading, setLoading] = useState<boolean>(true);
   return (
     <div className="flex justify-center items-center fixed z-50 p-4 overflow-x-hidden overflow-y-auto inset-0 bg-black bg-opacity-30">
@@ -33,7 +35,7 @@ export function Modal({
             </div>
             <div className="text-center px-24">
               <h3 className="text-[24px] font-semibold">
-                <span className="text-blue">Webinar: </span>
+                <span className="text-blue">{translate("webinar")} </span>
                 {video?.title}
               </h3>
             </div>
@@ -52,27 +54,31 @@ export function Modal({
             />
           </div>
           <div className="relative p-5">
-            <p className="font-bold text-sm border-b pb-2">Descrição</p>
+            <p className="font-bold text-sm border-b pb-2">
+              {translate("description")}
+            </p>
             <p className="pt-2 text-justify text-sm pb-2">
               {video?.description}
             </p>
-            <p className="font-bold text-sm border-b py-2">Downloads</p>
+            <p className="font-bold text-sm border-b py-2">
+              {translate("downloads")}
+            </p>
             <div className="pt-2 flex flex-wrap gap-1">
               <ButtonDownload
                 onClick={() => {}}
-                text="Spreadsheet.xls"
+                text={translate("spreadsheet-xls")}
                 icon={faCloudDownload}
                 theme={ButtonDownloadTheme.XLS}
               ></ButtonDownload>
               <ButtonDownload
                 onClick={() => {}}
-                text="Document.doc"
+                text={translate("document-doc")}
                 icon={faCloudDownload}
                 theme={ButtonDownloadTheme.DOC}
               ></ButtonDownload>
               <ButtonDownload
                 onClick={() => {}}
-                text="Presentation.ppt"
+                text={translate("presentation-ppt")}
                 icon={faCloudDownload}
                 theme={ButtonDownloadTheme.PPT}
               ></ButtonDownload>

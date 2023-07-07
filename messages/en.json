@@ -1,0 +1,68 @@
+{
+  "common": {
+    "home": {
+      "title": {
+        "exclusive-webinars": "EXCLUSIVE WEBINARS",
+        "less-talk": "Less Talk,",
+        "more": "More",
+        "conversation": "Conversion",
+        "game-changing": "Discover <b>game changing</b> strategies and how to apply them to your business"
+      },
+      "demonstration": {
+        "lead-generation": "Ready to triple your <b>Lead Generation?</b>",
+        "easy-creation": "Easy creation and activation",
+        "see-demonstration": "SEE DEMONSTRATION",
+        "no-credit-card": "No credit card required",
+        "average-satisfaction": "<b>4.9</b>/5 - Average Satisfaction"
+      },
+      "list": {
+        "filter": {
+          "agency": "Agency",
+          "chatbot": "Chatbot",
+          "digital-marketing": "Digital marketing",
+          "lead-generation": "Lead Generation",
+          "paid-media": "Paid media"
+        },
+        "order": {
+          "order-by": "Order by",
+          "name": "Name",
+          "publication-date": "Publication date"
+        },
+        "paginatio": {
+          "page": "Page"
+        },
+        "modal": {
+          "webinar": "Webinar:",
+          "description": "Description",
+          "downloads": "Downloads",
+          "spreadsheet-xls": "Spreadsheet.xls",
+          "document-doc": "Document.doc",
+          "presentation-ppt": "Presentation.ppt"
+        }
+      }
+    },
+    "footer": {
+      "main-links": "Main Links",
+      "home": "Home",
+      "tool": "Tool",
+      "prices": "Prices",
+      "contact": "Contact",
+      "cases": "Cases",
+      "blog": "blog",
+      "partnership": "Partnership with Agencies",
+      "guide": "Definitive Marketing Guide",
+      "free-materials": "Free Materials",
+      "materials": "Materials",
+      "b2b": "B2B Lead Generation",
+      "lead-generation-software": "Lead Generation in Software",
+      "lead-generation-real-estate": "Lead Generation in Real Estate",
+      "success-stories": "Success Stories",
+      "turning-visitors-customers": "Turning visitors into customers.",
+      "follow-leadster": "Follow Leadster",
+      "e-mail": "Email:",
+      "telephone": "Telephone:",
+      "copyright": "Copyright © 2015 - 2022 All rights reserved",
+      "terms-use": "Terms of use"
+    }
+  }
+}

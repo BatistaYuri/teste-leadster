@@ -1,7 +1,4 @@
-export interface ComboOption {
-  value: string | number;
-  label: string;
-}
+import { ComboOption } from "@/models/types";
 
 export function ComboBox({
   name,
@@ -10,6 +7,7 @@ export function ComboBox({
   valeu,
   children,
   className,
+  translate,
   onChange,
 }: {
   name: string;
@@ -18,6 +16,7 @@ export function ComboBox({
   options: ComboOption[];
   children: React.ReactNode;
   className?: string;
+  translate: any;
   onChange: (value: string) => void;
 }) {
   return (
@@ -31,8 +30,8 @@ export function ComboBox({
         value={valeu}
       >
         {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
+          <option key={option.id} value={option.id}>
+            {translate(option.name)}
           </option>
         ))}
       </select>

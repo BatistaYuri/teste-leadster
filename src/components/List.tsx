@@ -1,12 +1,18 @@
 "use client";
-import { getVideos, getAllCategories, getVideo } from "@/service/VideoService";
+import {
+  getVideos,
+  getAllCategories,
+  getVideo,
+  getOrderOptions,
+} from "@/service/VideoService";
 import { CardVideo } from "./CardVideo";
 import { OrderBy } from "./OrderBy";
 import { Paginator } from "./Paginator";
 import { Tooltip } from "./Tooltip";
 import { useCallback, useEffect, useState } from "react";
-import { Category, Video } from "@/models/videos";
+import { Category, ComboOption, Video } from "@/models/types";
 import { Spinner } from "./Spinner";
+import { useTranslations } from "next-intl";
 
 export function List({
   onClickVideo,
@@ -20,6 +26,8 @@ export function List({
   const [totalVideos, setTotalVideos] = useState<number>(0);
   const [categories, setCategories] = useState<Category[] | null>(null);
   const [filters, setFilters] = useState<number[]>([]);
+  const [orderByOptions, setOrderByOptions] = useState<ComboOption[]>([]);
+  const translate = useTranslations();
 
   const loadVideos = useCallback(() => {
     getVideos(page, limit, filters, order).then((response) => {
@@ -50,6 +58,9 @@ export function List({
     getAllCategories().then((response) => {
       setCategories(response);
     });
+    getOrderOptions().then((response) => {
+      setOrderByOptions(response);
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -68,7 +79,7 @@ export function List({
           {categories?.map(({ id, name }) => (
             <Tooltip
               key={id}
-              name={name}
+              name={translate(name)}
               selected={filters.includes(id)}
               onClick={() => onChangeFilter(id)}
             ></Tooltip>
@@ -76,11 +87,13 @@ export function List({
         </div>
         <div>
           <OrderBy
+            options={orderByOptions}
             value={order}
             onChange={(value) => {
               setOrder(value);
               setPage(1);
             }}
+            translate={translate}
           ></OrderBy>
         </div>
       </div>

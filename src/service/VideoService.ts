@@ -1,4 +1,4 @@
-import { Category, Video } from "@/models/videos";
+import { Category, ComboOption, Video } from "@/models/types";
 import axios from "axios";
 
 const api = axios.create({
@@ -46,6 +46,17 @@ export function getVideo(id: number): Promise<Video> {
 export function getAllCategories(): Promise<Category[]> {
   return api
     .get<{ categories: Category[] }>("/categories")
+    .then((response) => {
+      return response.data;
+    })
+    .catch((e) => {
+      return e;
+    });
+}
+
+export function getOrderOptions(): Promise<ComboOption[]> {
+  return api
+    .get<{ options: ComboOption[] }>("/orderOptions")
     .then((response) => {
       return response.data;
     })

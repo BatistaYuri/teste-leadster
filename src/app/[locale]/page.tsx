@@ -3,10 +3,12 @@ import Image from "next/image";
 import { Button, List, Modal } from "@/components";
 import { ButtonType } from "@/components/Button";
 import { useEffect, useState } from "react";
-import { Video } from "@/models/videos";
+import { Video } from "@/models/types";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
   const [video, setVideo] = useState<Video | null>(null);
+  const translate = useTranslations("common.home");
   useEffect(() => {
     const hidden = " overflow-y-hidden";
     if (video) {
@@ -21,18 +23,18 @@ export default function Home() {
       <div className="py-24 bg-light">
         <div className="container flex flex-col items-center">
           <div className="blue-box py-1 px-3 font-bold text-xs">
-            <p className="text-blue">WEBINARS EXCLUSIVOS</p>
+            <p className="text-blue">{translate("title.exclusive-webinars")}</p>
           </div>
           <h2 className="text-[2.4em] font-medium text-center">
-            Menos Conversinha,
+            {translate("title.less-talk")}
           </h2>
           <div className="flex flex-wrap justify-center px-5 pb-3 mb-2 border-b-2">
             <h1 className="text-7xl font-bold text-blue text-center mr-3">
-              Mais
+              {translate("title.more")}
             </h1>
             <div className="relative">
               <h1 className="text-7xl font-bold text-blue text-center">
-                Conversão
+                {translate("title.conversation")}
               </h1>
               <div className="flex w-full absolute justify-end top-[-2px] left-[16px]">
                 <Image
@@ -45,10 +47,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <p className="font-medium">
-            Conheça as estratégias que <strong>mudam o jogo</strong> e como
-            aplicá-las no seu negócio
-          </p>
+          <p
+            className="font-medium"
+            dangerouslySetInnerHTML={{
+              __html: translate.raw("title.game-changing"),
+            }}
+          ></p>
         </div>
       </div>
 
@@ -74,13 +78,19 @@ export default function Home() {
             </div>
             <div className="z-[2]">
               <h2 className="text-[2.4em] max-w-[450px] font-medium">
-                Pronto para triplicar sua <b>Geração de Leads?</b>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: translate.raw("demonstration.lead-generation"),
+                  }}
+                />
               </h2>
               <h3 className="text-[18px] font-semibold my-6">
-                Fácil criação e ativação
+                {translate("demonstration.easy-creation")}
               </h3>
               <div className="flex justify-start items-center flex-wrap">
-                <Button type={ButtonType.BLUE}>VER DEMONSTRAÇÃO</Button>
+                <Button type={ButtonType.BLUE}>
+                  {translate("demonstration.see-demonstration")}
+                </Button>
                 <Image
                   src="/images/selo_RD.png"
                   width={150}
@@ -100,7 +110,7 @@ export default function Home() {
                     loading="lazy"
                   />
                   <p className="text-[15px] font-medium mx-1">
-                    Não é necessário cartão de crédito |
+                    {translate("demonstration.no-credit-card")} |
                   </p>
                 </div>
                 <div className="flex items-center">
@@ -112,7 +122,13 @@ export default function Home() {
                     loading="lazy"
                   />
                   <p className="text-[15px] font-medium ml-1">
-                    <b>4.9</b>/5 - Média de Satisfação
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: translate.raw(
+                          "demonstration.average-satisfaction"
+                        ),
+                      }}
+                    />
                   </p>
                 </div>
               </div>

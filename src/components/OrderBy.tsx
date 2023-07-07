@@ -1,15 +1,15 @@
-import { ComboBox, ComboOption } from "./ComboBox";
-
-const options: ComboOption[] = [
-  { value: "date", label: "Data de Publicação" },
-  { value: "name", label: "Nome" },
-];
+import { ComboOption } from "@/models/types";
+import { ComboBox } from "./ComboBox";
 
 export function OrderBy({
+  options,
   value,
+  translate,
   onChange,
 }: {
+  options: ComboOption[];
   value: string;
+  translate: any;
   onChange: (value: string) => void;
 }) {
   return (
@@ -20,8 +20,11 @@ export function OrderBy({
       valeu={value}
       onChange={onChange}
       className="flex justify-end items-center gap-3"
+      translate={translate}
     >
-      <label className="text-sm font-bold">Ordenar por</label>
+      <label className="text-sm font-bold">
+        {translate("common.home.list.order.order-by")}
+      </label>
     </ComboBox>
   );
 }

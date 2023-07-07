@@ -1,0 +1,68 @@
+{
+  "common": {
+    "home": {
+      "title": {
+        "exclusive-webinars": "WEBINARS EXCLUSIVOS",
+        "less-talk": "Menos Conversinha,",
+        "more": "Mais",
+        "conversation": "Conversão",
+        "game-changing": "Conheça as estratégias que <b>mudam o jogo</b> e como aplicá-las no seu negócio"
+      },
+      "demonstration": {
+        "lead-generation": "Pronto para triplicar sua <b>Geração de Leads?</b>",
+        "easy-creation": "Fácil criação e ativação",
+        "see-demonstration": "VER DEMONSTRAÇÃO",
+        "no-credit-card": "Não é necessário cartão de crédito",
+        "average-satisfaction": "<b>4.9</b>/5 - Média de Satisfação"
+      },
+      "list": {
+        "filter": {
+          "agency": "Agência",
+          "chatbot": "Chatbot",
+          "digital-marketing": "Marketing Digital",
+          "lead-generation": "Geração de Leads",
+          "paid-media": "Mídia paga"
+        },
+        "order": {
+          "order-by": "Ordenar por",
+          "name": "Nome",
+          "publication-date": "Data de Publicação"
+        },
+        "paginatio": {
+          "page": "Página"
+        },
+        "modal": {
+          "webinar": "Webinar:",
+          "description": "Descrição",
+          "downloads": "Downloads",
+          "spreadsheet-xls": "Spreadsheet.xls",
+          "document-doc": "Document.doc",
+          "presentation-ppt": "Presentation.ppt"
+        }
+      }
+    },
+    "footer": {
+      "main-links": "Links Principais",
+      "home": "Home",
+      "tool": "Ferramenta",
+      "prices": "Preços",
+      "contact": "Contato",
+      "cases": "Cases",
+      "blog": "Blog",
+      "partnership": "Parceria com Agências",
+      "guide": "Guia Definitivo de Marketing",
+      "free-materials": "Materiais Gratuitos",
+      "materials": "Materiais",
+      "b2b": "Geração de Leads B2B",
+      "lead-generation-software": "Geração de Leads em Software",
+      "lead-generation-real-estate": "Geração de Leads em Imobiliária",
+      "success-stories": "Cases de Sucesso",
+      "turning-visitors-customers": "Transformando visitantes em clientes.",
+      "follow-leadster": "Siga a Leadster",
+      "e-mail": "E-mail:",
+      "telephone": "Telefone:",
+      "copyright": "Copyright © 2015 - 2022 Todos os direitos reservados",
+      "terms-use": "Termos de uso"
+    }
+  }
+}
