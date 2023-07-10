@@ -41,7 +41,7 @@ export function Modal({
             </div>
           </div>
           {loading && (
-            <div className="absolute w-full top-[275px]">
+            <div className="absolute w-full top-[300px]">
               <Spinner />
             </div>
           )}
