@@ -13,6 +13,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Category, ComboOption, Video } from "@/models/types";
 import { Spinner } from "./Spinner";
 import { useTranslations } from "next-intl";
+import { startAnimation } from "@/utils/animation";
 
 export function List({
   onClickVideo,
@@ -21,12 +22,13 @@ export function List({
 }) {
   const [page, setPage] = useState<number>(1);
   const [limit, setLimit] = useState<number>(9);
-  const [order, setOrder] = useState<string>("name");
+  const [order, setOrder] = useState<string>("date");
   const [videos, setVideos] = useState<Video[] | null>(null);
   const [totalVideos, setTotalVideos] = useState<number>(0);
   const [categories, setCategories] = useState<Category[] | null>(null);
   const [filters, setFilters] = useState<number[]>([]);
   const [orderByOptions, setOrderByOptions] = useState<ComboOption[]>([]);
+  const [disableAnimation, setDisableAnimation] = useState<boolean>(false);
   const translate = useTranslations();
 
   const loadVideos = useCallback(() => {
@@ -76,6 +78,14 @@ export function List({
     );
   }
 
+  startAnimation(document);
+
+  document.onscroll = () => {
+    setTimeout(() => {
+      startAnimation(document);
+    }, 150);
+  };
+
   return (
     <div>
       <div className="flex flex-col xl:flex-row mb-4 justify-between flex-wrap gap-3 w-full">
@@ -85,7 +95,10 @@ export function List({
               key={id}
               name={translate(name)}
               selected={filters.includes(id)}
-              onClick={() => onChangeFilter(id)}
+              onClick={() => {
+                onChangeFilter(id);
+                setDisableAnimation(true);
+              }}
             ></Tooltip>
           ))}
         </div>
@@ -96,6 +109,7 @@ export function List({
             onChange={(value) => {
               setOrder(value);
               setPage(1);
+              setDisableAnimation(true);
             }}
             translate={translate}
           ></OrderBy>
@@ -106,9 +120,11 @@ export function List({
           {videos?.map(({ id, title }) => (
             <CardVideo
               key={id}
+              thumbnail={`/images/thumbnail-${id}.png`}
               altImg={`Thumbnail Video ${id}`}
               title={title}
               onClick={() => handleVideo(id)}
+              className={disableAnimation ? "animation-init" : ""}
             ></CardVideo>
           ))}
         </div>
@@ -118,7 +134,11 @@ export function List({
           total={totalVideos}
           size={limit}
           index={page}
-          onClick={(index: number) => setPage(index)}
+          onClick={(index: number) => {
+            setPage(index);
+            setDisableAnimation(true);
+            window.scrollTo(0, 500);
+          }}
         />
       </div>
     </div>

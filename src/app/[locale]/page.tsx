@@ -76,60 +76,62 @@ export default function Home() {
                 loading="lazy"
               />
             </div>
-            <div className="z-[2] animation from-right">
-              <h2 className="text-[2.4em] max-w-[450px] font-medium">
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: translate.raw("demonstration.lead-generation"),
-                  }}
-                />
-              </h2>
-              <h3 className="text-[18px] font-semibold my-6">
-                {translate("demonstration.easy-creation")}
-              </h3>
-              <div className="flex justify-start items-center flex-wrap">
-                <Button type={ButtonType.BLUE}>
-                  {translate("demonstration.see-demonstration")}
-                </Button>
-                <Image
-                  src="/images/selo_RD.png"
-                  width={150}
-                  height={53.4}
-                  alt="Stamp Rd Station"
-                  className="m-4"
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex justify-start items-center flex-wrap mt-4">
-                <div className="flex items-center">
+            <div className="z-[2] flex items-center h-full animation from-right">
+              <div>
+                <h2 className="text-[2.4em] max-w-[450px] font-medium">
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: translate.raw("demonstration.lead-generation"),
+                    }}
+                  />
+                </h2>
+                <h3 className="text-[18px] font-semibold my-6">
+                  {translate("demonstration.easy-creation")}
+                </h3>
+                <div className="flex justify-start items-center flex-wrap">
+                  <Button type={ButtonType.BLUE}>
+                    {translate("demonstration.see-demonstration")}
+                  </Button>
                   <Image
-                    src="/images/no-card-dark.webp"
-                    width={16}
-                    height={16}
-                    alt="No Card"
+                    src="/images/selo_RD.png"
+                    width={150}
+                    height={53.4}
+                    alt="Stamp Rd Station"
+                    className="m-4"
                     loading="lazy"
                   />
-                  <p className="text-[15px] font-medium mx-1">
-                    {translate("demonstration.no-credit-card")} |
-                  </p>
                 </div>
-                <div className="flex items-center">
-                  <Image
-                    src="/images/rating.webp"
-                    width={92}
-                    height={16}
-                    alt="Rating"
-                    loading="lazy"
-                  />
-                  <p className="text-[15px] font-medium ml-1">
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: translate.raw(
-                          "demonstration.average-satisfaction"
-                        ),
-                      }}
+                <div className="flex justify-start items-center flex-wrap mt-4">
+                  <div className="flex items-center">
+                    <Image
+                      src="/images/no-card-dark.webp"
+                      width={16}
+                      height={16}
+                      alt="No Card"
+                      loading="lazy"
                     />
-                  </p>
+                    <p className="text-[15px] font-medium mx-1">
+                      {translate("demonstration.no-credit-card")} |
+                    </p>
+                  </div>
+                  <div className="flex items-center">
+                    <Image
+                      src="/images/rating.webp"
+                      width={92}
+                      height={16}
+                      alt="Rating"
+                      loading="lazy"
+                    />
+                    <p className="text-[15px] font-medium ml-1">
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: translate.raw(
+                            "demonstration.average-satisfaction"
+                          ),
+                        }}
+                      />
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

@@ -5,7 +5,11 @@ export function startAnimation(document: Document) {
     const inicio = posicoes.top;
     const fim = posicoes.bottom;
 
-    if (inicio >= 0 && fim <= window.innerHeight) {
+    if (
+      inicio >= 0 &&
+      fim <= window.innerHeight &&
+      !card.className.includes("animation-init")
+    ) {
       card.className = `${card.className} animation-init`;
     }
   });

@@ -7,27 +7,21 @@ import { startAnimation } from "@/utils/animation";
 config.autoAddCss = false;
 
 export function CardVideo({
-  thumbnailImg,
+  thumbnail,
   altImg,
   title,
+  className,
   onClick,
 }: {
-  thumbnailImg?: string;
+  thumbnail: string;
   altImg: string;
   title: string;
+  className?: string;
   onClick: () => void;
 }) {
-  const thumbnail = thumbnailImg ? thumbnailImg : "/images/thumbnail.png";
-  startAnimation(document);
-
-  document.onscroll = () => {
-    setTimeout(() => {
-      startAnimation(document);
-    }, 150);
-  };
   return (
     <div
-      className="card-video cursor-pointer relative animation from-left"
+      className={`card-video cursor-pointer relative animation from-left ${className}`}
       onClick={onClick}
     >
       <div className="">
@@ -37,6 +31,7 @@ export function CardVideo({
           height={300}
           alt={altImg}
           loading="lazy"
+          className="rounded-t-[15px]"
         />
       </div>
       <div className="card-video-player absolute top-0 justify-center items-center">
