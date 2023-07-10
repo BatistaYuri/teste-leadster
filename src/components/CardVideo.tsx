@@ -3,6 +3,7 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { startAnimation } from "@/utils/animation";
 config.autoAddCss = false;
 
 export function CardVideo({
@@ -17,8 +18,18 @@ export function CardVideo({
   onClick: () => void;
 }) {
   const thumbnail = thumbnailImg ? thumbnailImg : "/images/thumbnail.png";
+  startAnimation(document);
+
+  document.onscroll = () => {
+    setTimeout(() => {
+      startAnimation(document);
+    }, 150);
+  };
   return (
-    <div className="card-video cursor-pointer relative" onClick={onClick}>
+    <div
+      className="card-video cursor-pointer relative animation from-left"
+      onClick={onClick}
+    >
       <div className="">
         <Image
           src={thumbnail}

@@ -57,7 +57,7 @@ export default function Home() {
       </div>
 
       <div className="py-12">
-        <div className="container flex justify-center">
+        <div className="container flex justify-center w-full">
           <List onClickVideo={(video) => setVideo(video)} />
         </div>
       </div>
@@ -66,7 +66,7 @@ export default function Home() {
         <div className="bg-wave"></div>
         <div className="container">
           <div className="grid lg:grid-cols-2 md:grid-cols-1 place-items-center flex-wrap">
-            <div className="flex z-[2]">
+            <div className="flex z-[2] animation from-left">
               <Image
                 src="/images/comparativo_img_CTA.png"
                 width={618}
@@ -76,7 +76,7 @@ export default function Home() {
                 loading="lazy"
               />
             </div>
-            <div className="z-[2]">
+            <div className="z-[2] animation from-right">
               <h2 className="text-[2.4em] max-w-[450px] font-medium">
                 <div
                   dangerouslySetInnerHTML={{

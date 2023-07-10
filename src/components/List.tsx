@@ -69,12 +69,16 @@ export function List({
   }, [loadVideos, page, order, filters]);
 
   if (!videos && !categories) {
-    return <Spinner />;
+    return (
+      <div className="flex items-center w-full max-w-[1100px] min-h-[450px]">
+        <Spinner />
+      </div>
+    );
   }
 
   return (
     <div>
-      <div className="flex flex-col xl:flex-row mb-4 justify-between flex-wrap gap-3">
+      <div className="flex flex-col xl:flex-row mb-4 justify-between flex-wrap gap-3 w-full">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:flex justify-center gap-3">
           {categories?.map(({ id, name }) => (
             <Tooltip
