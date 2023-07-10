@@ -122,15 +122,14 @@ export default function Home() {
                       alt="Rating"
                       loading="lazy"
                     />
-                    <p className="text-[15px] font-medium ml-1">
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: translate.raw(
-                            "demonstration.average-satisfaction"
-                          ),
-                        }}
-                      />
-                    </p>
+                    <p
+                      className="text-[15px] font-medium ml-1"
+                      dangerouslySetInnerHTML={{
+                        __html: translate.raw(
+                          "demonstration.average-satisfaction"
+                        ),
+                      }}
+                    ></p>
                   </div>
                 </div>
               </div>
