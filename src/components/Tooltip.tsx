@@ -9,6 +9,7 @@ export function Tooltip({
 }) {
   return (
     <div
+      data-cy="tooltip"
       className={`tooltip px-4 py-2 text-sm cursor-pointer self-center ${
         selected && "selected"
       }`}

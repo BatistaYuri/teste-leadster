@@ -116,7 +116,10 @@ export function List({
         </div>
       </div>
       <div className="flex justify-center py-8 border-y-2">
-        <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-6">
+        <div
+          data-cy="card-video-list"
+          className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-6"
+        >
           {videos?.map(({ id, title }) => (
             <CardVideo
               key={id}

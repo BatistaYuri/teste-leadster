@@ -14,9 +14,9 @@ export function ComboBox({
   id: string;
   valeu: string | number;
   options: ComboOption[];
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
-  translate: any;
+  translate?: any;
   onChange: (value: string) => void;
 }) {
   return (
@@ -31,7 +31,7 @@ export function ComboBox({
       >
         {options.map((option) => (
           <option key={option.id} value={option.id}>
-            {translate(option.name)}
+            {translate ? translate(option.name) : option.name}
           </option>
         ))}
       </select>
