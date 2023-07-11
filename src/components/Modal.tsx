@@ -20,8 +20,14 @@ export function Modal({
     <div
       data-cy="modal"
       className="flex justify-center items-center fixed z-50 p-4 overflow-x-hidden overflow-y-auto inset-0 bg-black bg-opacity-30"
+      onClick={onClose}
     >
-      <div className="modal-animation relative w-auto mx-auto max-w-xl rounded-2xl overflow-hidden">
+      <div
+        className="modal-animation relative w-auto mx-auto max-w-xl rounded-2xl overflow-hidden"
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         <div className="bg-white shadow rounded-[16px]">
           <div className="absolute w-full h-1 bg-blue" />
           <div className="pt-3 pb-6">

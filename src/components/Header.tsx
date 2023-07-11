@@ -8,6 +8,7 @@ export function Header() {
         width={170}
         height={36}
         alt="Logo Leadster"
+        priority={true}
       />
     </div>
   );

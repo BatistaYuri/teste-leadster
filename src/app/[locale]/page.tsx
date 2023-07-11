@@ -48,7 +48,7 @@ export default function Home() {
             </div>
           </div>
           <p
-            className="font-medium"
+            className="font-medium text-center"
             dangerouslySetInnerHTML={{
               __html: translate.raw("title.game-changing"),
             }}
