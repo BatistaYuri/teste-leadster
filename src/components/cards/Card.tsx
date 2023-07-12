@@ -8,9 +8,18 @@ config.autoAddCss = false;
 export function Card({
   className,
   children,
+  onClick,
 }: {
   className?: string;
   children: React.ReactNode;
+  onClick?: () => void;
 }) {
-  return <div className={`card ${className}`}>{children}</div>;
+  return (
+    <div
+      className={`card ${className} ${onClick && "cursor-pointer"}`}
+      onClick={onClick}
+    >
+      {children}
+    </div>
+  );
 }

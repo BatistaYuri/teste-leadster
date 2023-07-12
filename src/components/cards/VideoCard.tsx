@@ -21,7 +21,8 @@ export function VideoCard({
 }) {
   return (
     <Card
-      className={`card-video cursor-pointer relative animation from-left ${className}`}
+      className={`card-video relative animation from-left ${className}`}
+      onClick={onClick}
     >
       <div>
         <Image
