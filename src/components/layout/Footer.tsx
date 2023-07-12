@@ -11,28 +11,28 @@ import { useTranslations } from "next-intl";
 const mainLinks: AboutList = {
   name: "main-links",
   itens: [
-    { id: 0, name: "home", href: "/" },
-    { id: 1, name: "tool", href: "/" },
-    { id: 2, name: "prices", href: "/" },
-    { id: 3, name: "contact", href: "/" },
+    { id: 0, name: "home", href: "#" },
+    { id: 1, name: "tool", href: "#" },
+    { id: 2, name: "prices", href: "#" },
+    { id: 3, name: "contact", href: "#" },
   ],
 };
 const cases: AboutList = {
   name: "cases",
   itens: [
-    { id: 0, name: "blog", href: "/" },
-    { id: 1, name: "partnership", href: "/" },
-    { id: 2, name: "guide", href: "/" },
-    { id: 3, name: "free-materials", href: "/" },
+    { id: 0, name: "blog", href: "#" },
+    { id: 1, name: "partnership", href: "#" },
+    { id: 2, name: "guide", href: "#" },
+    { id: 3, name: "free-materials", href: "#" },
   ],
 };
 const materials: AboutList = {
   name: "materials",
   itens: [
-    { id: 0, name: "b2b", href: "/" },
-    { id: 1, name: "lead-generation-software", href: "/" },
-    { id: 2, name: "lead-generation-real-estate", href: "/" },
-    { id: 3, name: "success-stories", href: "/" },
+    { id: 0, name: "b2b", href: "#" },
+    { id: 1, name: "lead-generation-software", href: "#" },
+    { id: 2, name: "lead-generation-real-estate", href: "#" },
+    { id: 3, name: "success-stories", href: "#" },
   ],
 };
 
@@ -62,9 +62,9 @@ export function Footer() {
               {translate("follow-leadster")}
             </p>
             <div className="list-icon-social mb-2">
-              <Icon svg={faLinkedinIn} href="/" />
-              <Icon svg={faFacebookF} href="/" />
-              <Icon svg={faInstagram} href="/" />
+              <Icon svg={faLinkedinIn} href="#" />
+              <Icon svg={faFacebookF} href="#" />
+              <Icon svg={faInstagram} href="#" />
             </div>
             <div className="flex flex-wrap">
               <p className="font-medium">{translate("e-mail")}</p>

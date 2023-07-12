@@ -19,3 +19,7 @@
 .list-icon-social a + a {
   margin-left: 10px;
 }
+
+li a:hover {
+  color: #007dff !important;
+}
