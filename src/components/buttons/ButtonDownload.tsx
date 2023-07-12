@@ -1,7 +1,4 @@
-import {
-  IconDefinition,
-  faCloudDownload,
-} from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export enum ButtonDownloadTheme {
@@ -16,13 +13,16 @@ export function ButtonDownload({
   icon,
   theme,
 }: {
-  onClick: () => void;
+  onClick?: () => void;
   text: string;
   icon: IconDefinition;
   theme: ButtonDownloadTheme;
 }) {
   return (
-    <button className={`flex justify-center items-center ${theme}`}>
+    <button
+      className={`flex justify-center items-center ${theme}`}
+      onClick={onClick}
+    >
       <div className="flex items-center px-2 py-1 rounded-l-md h-full">
         <FontAwesomeIcon icon={icon} height={18} width={18} />
       </div>

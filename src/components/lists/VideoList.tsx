@@ -5,15 +5,11 @@ import {
   getVideo,
   getOrderOptions,
 } from "@/service/VideoService";
-import { VideoCard } from "../cards/VideoCard";
-import { OrderBy } from "../combos/OrderBy";
-import { Paginator } from "../Paginator";
-import { Tooltip } from "../Tooltip";
 import { useCallback, useEffect, useState } from "react";
 import { Category, ComboOption, Video } from "@/models/types";
-import { Spinner } from "../Spinner";
 import { useTranslations } from "next-intl";
 import { startAnimation } from "@/utils/animationUtils";
+import { VideoCard, OrderBy, Paginator, Tooltip, Spinner } from "@/components";
 
 export function VideoList({
   onClickVideo,

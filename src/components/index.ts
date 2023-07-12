@@ -11,3 +11,5 @@ export { Paginator } from "./Paginator";
 export { VideoModal } from "./modals/VideoModal";
 export { ButtonDownload } from "./buttons/ButtonDownload";
 export { Spinner } from "./Spinner";
+export { Modal } from "./modals/Modal";
+export { Card } from "./cards/Card";

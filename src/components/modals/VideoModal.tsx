@@ -4,9 +4,8 @@ import ReactPlayer from "react-player";
 import { ButtonDownload, ButtonDownloadTheme } from "../buttons/ButtonDownload";
 import { faCloudDownload } from "@fortawesome/free-solid-svg-icons";
 import { Video } from "@/models/types";
-import { Spinner } from "../Spinner";
 import { useTranslations } from "next-intl";
-import { Modal } from "./Modal";
+import { Modal, Spinner } from "@/components";
 export function VideoModal({
   video,
   onClose,
