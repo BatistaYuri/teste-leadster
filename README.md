@@ -7,7 +7,7 @@ Teste para vaga na empresa Leadster
 Layout disponibilizado:
 ![preview](public/images/preview.png)
 
-Resultado Final: https://teste-leadster-lw3v54e24-batistayuri.vercel.app/
+Resultado Final: https://teste-leadster-one.vercel.app/
 
 ## Instalação e execução da aplicação
 
