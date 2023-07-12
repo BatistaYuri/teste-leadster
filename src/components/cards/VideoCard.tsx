@@ -3,10 +3,9 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import { startAnimation } from "@/utils/animation";
 config.autoAddCss = false;
 
-export function CardVideo({
+export function VideoCard({
   thumbnail,
   altImg,
   title,

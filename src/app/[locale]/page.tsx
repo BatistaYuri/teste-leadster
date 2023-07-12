@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { Button, List, Modal } from "@/components";
-import { ButtonType } from "@/components/Button";
+import { Button, VideoList, VideoModal } from "@/components";
+import { ButtonType } from "@/components/buttons/Button";
 import { useEffect, useState } from "react";
 import { Video } from "@/models/types";
 import { useTranslations } from "next-intl";
@@ -19,8 +19,8 @@ export default function Home() {
   }, [video]);
   return (
     <>
-      {video && <Modal video={video} onClose={() => setVideo(null)} />}
-      <div className="py-24 bg-light">
+      {video && <VideoModal video={video} onClose={() => setVideo(null)} />}
+      <section className="py-24 bg-light">
         <div className="container flex flex-col items-center">
           <div className="blue-box py-1 px-3 font-bold text-xs">
             <p className="text-blue">{translate("title.exclusive-webinars")}</p>
@@ -54,15 +54,15 @@ export default function Home() {
             }}
           ></p>
         </div>
-      </div>
+      </section>
 
-      <div className="py-12">
+      <section className="py-12">
         <div className="container flex justify-center w-full">
-          <List onClickVideo={(video) => setVideo(video)} />
+          <VideoList onClickVideo={(video) => setVideo(video)} />
         </div>
-      </div>
+      </section>
 
-      <div className="py-12 bg-light relative overflow-hidden">
+      <section className="py-12 bg-light relative overflow-hidden">
         <div className="bg-wave"></div>
         <div className="container">
           <div className="grid lg:grid-cols-2 md:grid-cols-1 place-items-center flex-wrap">
@@ -136,7 +136,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -1,0 +1,84 @@
+@import url(./buttons/buttons.css);
+@import url(./cards/cards.css);
+@import url(./combos/combos.css);
+@import url(./layout/layout.css);
+@import url(./lists/lists.css);
+@import url(./modals/modals.css);
+
+.tooltip {
+  border: solid 1px #2c3e50;
+  border-radius: 30px;
+}
+
+.tooltip:hover {
+  border-color: #007dff;
+}
+
+.tooltip:hover p {
+  color: #007dff !important;
+}
+
+.tooltip.selected {
+  border-color: #007dff !important;
+  background-color: #007dff !important;
+}
+
+.tooltip.selected p {
+  color: #fff !important;
+}
+
+.paginator-number-page.selected {
+  border: solid 1px #007dff;
+  border-radius: 5px;
+}
+
+.paginator-number-page:hover p,
+.paginator-number-page.selected p {
+  color: #007dff !important;
+}
+
+/* animations  */
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.from-left {
+  opacity: 0;
+  transform: translate3D(-50px, 0px, 0px);
+}
+
+.from-right {
+  opacity: 0;
+  transform: translate3D(50px, 0px, 0px);
+}
+
+.animation-init {
+  opacity: 1;
+  transform: translate3D(0px, 0px, 0px);
+  transition: 0.3s all ease;
+}

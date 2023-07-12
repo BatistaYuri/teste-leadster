@@ -1,0 +1,9 @@
+.modal-animation {
+  -webkit-animation: scale-in-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: scale-in-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.react-player div {
+  width: auto !important;
+  max-width: 576px !important;
+}

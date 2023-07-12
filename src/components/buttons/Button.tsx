@@ -1,6 +1,5 @@
 export enum ButtonType {
   BLUE = "button-blue",
-  DOWNLOAD = "button-dowload",
 }
 
 export function Button({

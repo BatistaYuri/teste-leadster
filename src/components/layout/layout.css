@@ -1,0 +1,21 @@
+.list-icon-social a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 45px;
+  color: #858da8;
+  display: inline-block;
+  background: #ebeef5;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+
+.list-icon-social a:hover {
+  background: #00aff0;
+  color: #fff;
+}
+
+.list-icon-social a + a {
+  margin-left: 10px;
+}

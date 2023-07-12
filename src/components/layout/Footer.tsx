@@ -61,7 +61,7 @@ export function Footer() {
             <p className="text-lg font-semibold mb-5">
               {translate("follow-leadster")}
             </p>
-            <div className="icon-social mb-2">
+            <div className="list-icon-social mb-2">
               <Icon svg={faLinkedinIn} href="/" />
               <Icon svg={faFacebookF} href="/" />
               <Icon svg={faInstagram} href="/" />

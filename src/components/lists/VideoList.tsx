@@ -5,23 +5,23 @@ import {
   getVideo,
   getOrderOptions,
 } from "@/service/VideoService";
-import { CardVideo } from "./CardVideo";
-import { OrderBy } from "./OrderBy";
-import { Paginator } from "./Paginator";
-import { Tooltip } from "./Tooltip";
+import { VideoCard } from "../cards/VideoCard";
+import { OrderBy } from "../combos/OrderBy";
+import { Paginator } from "../Paginator";
+import { Tooltip } from "../Tooltip";
 import { useCallback, useEffect, useState } from "react";
 import { Category, ComboOption, Video } from "@/models/types";
-import { Spinner } from "./Spinner";
+import { Spinner } from "../Spinner";
 import { useTranslations } from "next-intl";
-import { startAnimation } from "@/utils/animation";
+import { startAnimation } from "@/utils/animationUtils";
 
-export function List({
+export function VideoList({
   onClickVideo,
 }: {
   onClickVideo: (video: Video) => void;
 }) {
   const [page, setPage] = useState<number>(1);
-  const [limit, setLimit] = useState<number>(9);
+  const [limit] = useState<number>(9);
   const [order, setOrder] = useState<string>("date");
   const [videos, setVideos] = useState<Video[] | null>(null);
   const [totalVideos, setTotalVideos] = useState<number>(0);
@@ -121,14 +121,14 @@ export function List({
           className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-6"
         >
           {videos?.map(({ id, title }) => (
-            <CardVideo
+            <VideoCard
               key={id}
               thumbnail={`/images/thumbnail-${id}.png`}
               altImg={`Thumbnail Video ${id}`}
               title={title}
               onClick={() => handleVideo(id)}
               className={disableAnimation ? "animation-init" : ""}
-            ></CardVideo>
+            ></VideoCard>
           ))}
         </div>
       </div>
