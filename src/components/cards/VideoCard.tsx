@@ -3,6 +3,7 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { Card } from "./Card";
 config.autoAddCss = false;
 
 export function VideoCard({
@@ -19,11 +20,10 @@ export function VideoCard({
   onClick: () => void;
 }) {
   return (
-    <div
+    <Card
       className={`card-video cursor-pointer relative animation from-left ${className}`}
-      onClick={onClick}
     >
-      <div className="">
+      <div>
         <Image
           src={thumbnail}
           width={350}
@@ -43,8 +43,10 @@ export function VideoCard({
         />
       </div>
       <div className="px-6 py-4">
-        <p className="font-semibold">{title}</p>
+        <p className="font-semibold ellipsis-2-lines" title={title}>
+          {title}
+        </p>
       </div>
-    </div>
+    </Card>
   );
 }

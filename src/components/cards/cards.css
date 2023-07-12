@@ -1,6 +1,9 @@
-.card-video {
+.card {
   box-shadow: 0 0 30px 5px rgba(28, 43, 76, 0.1);
   border-radius: 15px;
+}
+
+.card-video {
   width: 350px;
   max-height: 300px;
   opacity: 1;
