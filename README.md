@@ -53,11 +53,11 @@ npm run cy:run
 
 ## Organização do código
 
-- `i18n.js e middleware.js`: são arquivos de configuração da
+- `i18n.js e middleware.js`: são arquivos de configuração da internacionalização;
 - `/mensagens`: contêm os textos da aplicação;
-- `/public`: contêm as fontes e imagens disponibilizadas internacionalização;
-- `/src/app`: as pastas dentro da pasta app representam as rotas, como o projeto só tem uma página, a pasta app só tem página principal. obs: todas as novas rotas devem ser incluídas dentro da pasta `[locale]` para a internacionalização funcionar corretamente;
-- `/src/components`: possui algumas pastas separando alguns componentes de mesma “categoria”, cada uma dessas pastas possui seu próprio arquivo .css para melhor organização dos styles. Essa pasta possui o arquivo de index.ts para organizar melhor as importação, se alguma página ou componentes importar mais de um componentes o caminho de importação será o mesmo, diminuindo o número de linhas e identificando melhor quais os componentes;
+- `/public`: contêm as fontes e imagens disponibilizadas;
+- `/src/app`: as pastas dentro da pasta app representam as rotas, como o projeto só tem uma página, a pasta app só tem página principal. obs: todas as novas rotas devem ser incluídas dentro na pasta `[locale]` para a internacionalização funcionar corretamente;
+- `/src/components`: possui algumas pastas separando alguns componentes de mesma “categoria”, cada uma dessas pastas possui seu próprio arquivo .css para melhor organização dos styles. Essa pasta possui o arquivo de index.ts para organizar melhor as importação, se alguma página ou componentes importar mais de um componente o caminho de importação será o mesmo, diminuindo o número de linhas e identificando melhor quais os componentes;
 - `/src/models`: pasta que possui arquivos com types e interfaces;
 - `/src/service`: pasta que possui arquivos com requisições http;
 - `/src/utils`: pasta com arquivos utilitários;
@@ -84,8 +84,8 @@ O plus que escolhi para talvez me destacar dos demais foi a internacionalizaçã
 
 ## Trabalhos futuros e melhorias
 
-- Utilizar GrapQL;
+- Utilizar GraphQL;
 - Utilizar SCSS;
 - Melhorar responsividade para iphones (utilizei um android para alguns teste e respondeu bem, mas por algum motivo em iphones algumas partes não responderam bem, mas não consegui trabalhar nisso, só fui avisado por amigos, mas como o foco não era esse, optei por deixar como melhorias futuras);
-- Tratar erros para requisições REST (como o ambiente que trabalhei era controlada optei por deixar essa parte como melhorias futuros);
+- Tratar erros para requisições REST (como o ambiente que trabalhei era controlado optei por deixar essa parte como melhorias futuros);
 - Desenvolver componentes orientado a testes (por conta da possibilidade do cypress testar os componenetes separadamente mais fácil);
