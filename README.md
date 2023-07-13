@@ -66,26 +66,36 @@ npm run cy:run
 
 ###
 
-Esse é meu primeiro projeto com NextJs, então além de fazer esse desafio com o objetivo de trabalhar na empresa, busquei levar como uma atividade para estudar tecnologias novas e praticar as que já tinha experiência, levando em consideração isso, optei por escolher Tailwind ao invés de Bootstrap (o que já estou acostumado) e Typescript que além de eu estar acostumado também, era um ponto positivo de acordo com o desafio.
+Esse é meu primeiro projeto com NextJs, então além de fazer o desafio com o objetivo de conquistar o cargo, busquei levar como atividade para estudar novas tecnologias, além de praticar as que já tinha conhecimento. Levando isso em consideração, optei por escolher Tailwind ao invés de Bootstrap e Typescript, tecnologias que já utilizei em diferentes experiências.
 
 ### Desenvolvimento
 
-O desenvolvimento foi feito em pequenas etapas, comecei pelo header e footer da página, elementos que vão estar presentes em todas as páginas. Em seguida comecei a implementar a landing page, começando pelas partes mais simples onde apenas incluía texto e imagens, que seria a seção que está o título/slogan e a seção de demonstração. Por fim foi desenvolvido a listagem de webinários, onde as informações foram retiradas do canal do youtube da Leadster e organizados em um .json, onde na fase de desenvolvimento utilizei a biblioteca json-server para simular uma REST API localmente, e mais tarde subi essa base de dados em um [repositório](https://github.com/BatistaYuri/json-server-leadster) separdo e utilizei do [url da typicode](https://my-json-server.typicode.com/BatistaYuri/json-server-leadster). No final implementei algumas animações simples com css.
+O desenvolvimento foi feito em pequenas etapas:
 
-Toda essa parte de desenvolvimento levei muito em consideração a responsividade e a componentização dos elementos, onde implementei componentes que achava que se o projeto continuasse, eram mais prováveis de serem reutilizados em outras partes do código;
+1. Início pelo header e footer da página, elementos que vão estar presentes em todas as páginas;
+2. Implementação da landing page, começando pelas partes mais simples onde apenas incluía texto e imagens, como a seção de título/slogan e a seção de demonstração.
+3. Desenvolvimento de webinários, em que as informações foram retiradas do canal do Youtube da Leadster e organizados em um .json.
+4. Implementação de animações com CSS.
+
+Na fase de desenvolvimento, utilizei a biblioteca json-server para simular uma REST API localmente, e, posteriormente, subi a base de dados em um [repositório](https://github.com/BatistaYuri/json-server-leadster) separado, [url da typicode](https://my-json-server.typicode.com/BatistaYuri/json-server-leadster).
+
+Durante o desenvolvimento, foi levado em consideração a responsividade e a componentização dos elementos. Com a possibilidade de continuidade do projeto, foram utilizados componentes serem reutilizados em outras partes do código.
 
 ### Testes
 
-Pro final deixei os teste, escolhi o Cypress, o qual não tinha uma experiência prévia também, o objetivo aqui foi só demostrar que sei implementar testes, então implementei testes simples, um teste end-to-end para testar o modal onde o vídeo do webinar é executado e um teste de componentes no componente Tooltip;
+O Cypress foi escolhido para implementar testes simples, como:
+
+- Teste end-to-end para testar o modal onde o vídeo do webinar é executado;
+- Teste de componentes no componente Tooltip;
 
 ### Internacionalização
 
-O plus que escolhi para talvez me destacar dos demais foi a internacionalização do projeto, como o objetivo era ser fiel ao layout proposto, optei em utilizar o next-intl, onde é possível escolher o idioma pela url, o site está disponível em portugês(/pt) e inglês(/en). Além da vantagem de ter o site em mais de uma língua, como os textos são montados em um .json, é possível que pessoas que não são desenvolvedores possam editar esses arquivos sem muito esforço.
+Para ir além na entrega, implementei a internacionalização do projeto. Como a proposta consiste em layout fiel ao proposto, optei em utilizar o next-intl, em que é possível escolher o idioma pela url, o site está disponível em portugês(/pt) e inglês(/en). Além da vantagem de ter o site em mais de uma língua, como os textos são montados em um .json, é possível que pessoas que não são desenvolvedores possam editar esses arquivos sem muito esforço.
 
 ## Trabalhos futuros e melhorias
 
 - Utilizar GraphQL;
 - Utilizar SCSS;
-- Melhorar responsividade para iphones (utilizei um android para alguns teste e respondeu bem, mas por algum motivo em iphones algumas partes não responderam bem, mas não consegui trabalhar nisso, só fui avisado por amigos, mas como o foco não era esse, optei por deixar como melhorias futuras);
-- Tratar erros para requisições REST (como o ambiente que trabalhei era controlado optei por deixar essa parte como melhorias futuros);
-- Desenvolver componentes orientado a testes (por conta da possibilidade do cypress testar os componenetes separadamente mais fácil);
+- Melhorar responsividade para Iphone (utilizei um Android para testes com responsividade, mas, por alguma razão, em Iphones algumas partes não responderam bem após realizados testes em outros dispositivos).
+- Tratar erros para requisições REST (como o ambiente trabalhaddo era controlado, optei por deixar essa parte como melhorias futuros);
+- Desenvolver componentes orientado a testes (por conta da possibilidade do cypress testar os componenetes separadamente com mais facilidade);
