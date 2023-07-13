@@ -98,4 +98,4 @@ Para ir além na entrega, implementei a internacionalização do projeto. Como a
 - Utilizar SCSS;
 - Melhorar responsividade para Iphone (utilizei um Android para testes com responsividade, mas, por alguma razão, em Iphones algumas partes não responderam bem após realizados testes em outros dispositivos).
 - Tratar erros para requisições REST (como o ambiente trabalhaddo era controlado, optei por deixar essa parte como melhorias futuros);
-- Desenvolver componentes orientado a testes (por conta da possibilidade do cypress testar os componenetes separadamente com mais facilidade);
+- Desenvolver componentes orientado a testes (por conta da possibilidade do cypress testar os componentes separadamente com mais facilidade);
